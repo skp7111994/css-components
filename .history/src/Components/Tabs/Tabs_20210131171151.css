@@ -25,10 +25,6 @@
 @media screen and (max-width: 480px) {
   .tab-container {
     flex-direction: column;
-  }
-  .tab.active {
-    border: none;
-    background: #323130;
-    color: #fff;
+    justify-content: baseline;
   }
 }

@@ -13,10 +13,8 @@ const Tabs = (props) => {
         }
     }
     useEffect(() => {
-        if (showPath) {
-            history.push(tabs[0].label.toLowerCase())
-        }
-    }, [tabs, history, showPath]);
+        history.push('first')
+    }, [history])
     return <>
         <div className="tab-container">
             {tabs.map((tab, tabIndex) => <div key={tabIndex} className="tab-body">

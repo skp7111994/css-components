@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './Tabs.css'
 
@@ -9,14 +9,9 @@ const Tabs = (props) => {
     const onTabChange = (currentIndex, label) => {
         setSelectedTab(currentIndex);
         if (showPath) {
-            history.push(`${label.toLowerCase()}`);
+            history.push(`${label}`);
         }
     }
-    useEffect(() => {
-        if (showPath) {
-            history.push(tabs[0].label.toLowerCase())
-        }
-    }, [tabs, history, showPath]);
     return <>
         <div className="tab-container">
             {tabs.map((tab, tabIndex) => <div key={tabIndex} className="tab-body">

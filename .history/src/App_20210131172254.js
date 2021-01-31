@@ -75,7 +75,7 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <Tabs tabs={tabs} />
+        <Tabs tabs={tabs} showPath={true} />
       </div>
     </BrowserRouter>
   );

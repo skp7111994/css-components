@@ -26,9 +26,4 @@
   .tab-container {
     flex-direction: column;
   }
-  .tab.active {
-    border: none;
-    background: #323130;
-    color: #fff;
-  }
 }

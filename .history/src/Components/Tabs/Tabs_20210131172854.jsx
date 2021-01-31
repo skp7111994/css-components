@@ -16,7 +16,7 @@ const Tabs = (props) => {
         if (showPath) {
             history.push(tabs[0].label.toLowerCase())
         }
-    }, [tabs, history, showPath]);
+    }, [tabs, history, showPath])
     return <>
         <div className="tab-container">
             {tabs.map((tab, tabIndex) => <div key={tabIndex} className="tab-body">
