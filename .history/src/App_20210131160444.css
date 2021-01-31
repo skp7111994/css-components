@@ -88,6 +88,5 @@ video {
 }
 
 * {
-  font-family: Graphik !important;
-  color: #323130;
+  font-family: Graphik, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

@@ -1,0 +1,9 @@
+.tab-container {
+  display: flex;
+  justify-content: center;
+}
+.tab {
+  padding: 1rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}

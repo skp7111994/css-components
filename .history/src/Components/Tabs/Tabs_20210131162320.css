@@ -1,0 +1,12 @@
+.tab-container {
+  display: flex;
+  justify-content: center;
+}
+.tab {
+  padding: 1rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.active {
+  border-bottom: 3px solid #323130;
+}

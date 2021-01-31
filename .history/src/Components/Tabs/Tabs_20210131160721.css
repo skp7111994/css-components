@@ -1,0 +1,6 @@
+.tab-container {
+  display: flex;
+}
+.tab-header {
+  border: 1px solid;
+}

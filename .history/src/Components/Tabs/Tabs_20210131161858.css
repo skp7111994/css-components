@@ -1,0 +1,10 @@
+.tab-container {
+  display: flex;
+  justify-content: center;
+}
+.tab {
+  padding: 1rem 1.5rem;
+  background: #7500c0;
+  color: #fff;
+  font-weight: 500;
+}
