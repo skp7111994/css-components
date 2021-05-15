@@ -1,0 +1,106 @@
+#multiselect .accordion {
+  width: 20rem;
+}
+#multiselect .title {
+  display: flex;
+  justify-content: space-between;
+}
+#multiselect .title,
+.content {
+  position: relative;
+}
+#multiselect .accordion .content {
+  display: flex;
+  flex-flow: column nowrap;
+  border: 0;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+  max-height: 50vh;
+  overflow-y: auto;
+}
+#multiselect .accordion .content .option {
+  display: flex;
+  padding: 0.6rem 0.6rem;
+  cursor: pointer;
+}
+#multiselect .accordion .content .option:hover {
+  background: #eee;
+}
+#multiselect .rotate {
+  transform: rotateX(180deg);
+  transition: 0.2s;
+}
+#multiselect .chevron {
+  position: absolute;
+  right: 0.6rem;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+label {
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Checkbox CSS */
+#checkbox label {
+  display: block;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input[type='text'] {
+  min-height: 30px;
+  max-height: 5vh;
+  flex-basis: 100%;
+  padding: 0 0.6rem;
+}
+#checkbox input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+#checkbox .checkmark {
+  position: absolute;
+  bottom: -1rem;
+  left: 1rem;
+  height: 1.35rem;
+  width: 1.35rem;
+  border: 1px solid #909099;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  /* background-color: #2196f3; */
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  width: 0.35rem;
+  height: 0.86rem;
+  border: solid var(--checkbox-checked);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

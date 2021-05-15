@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
+import Multiselect from './Components/Multiselect/Multiselect';
 import Tabs from './Components/Tabs/Tabs';
 
 function App() {
+  const [selectedOptions, setSelectedOptions] = useState([]);
   const tabs = [
     {
       label: 'First',
@@ -72,11 +74,66 @@ function App() {
       ),
     },
   ];
+  const multiselectMock = [
+    {
+      label: 'Afghanistan',
+      value: 'AF',
+      checked: false,
+    },
+    {
+      label: 'Albania',
+      value: 'AL',
+      checked: false,
+    },
+    {
+      label: 'Australia',
+      value: 'AU',
+      checked: false,
+    },
+    {
+      label: 'Bangladesh',
+      value: 'BAN',
+      checked: false,
+    },
+    {
+      label: 'Bhutan',
+      value: 'BH',
+      checked: false,
+    },
+    {
+      label: 'China',
+      value: 'CH',
+      checked: false,
+    },
+    {
+      label: 'Chile',
+      value: 'CL',
+      checked: false,
+    },
+    {
+      label: 'Egypt',
+      value: 'EG',
+      checked: false,
+    },
+    {
+      label: 'India',
+      value: 'IN',
+      checked: false,
+    },
+    {
+      label: 'Japan',
+      value: 'JP',
+      checked: false,
+    },
+  ];
   return (
     <BrowserRouter>
-      <div>
-        <Tabs tabs={tabs} />
-      </div>
+      <div>{/* <Tabs tabs={tabs} /> */}</div>
+      <Multiselect
+        options={multiselectMock}
+        value={selectedOptions}
+        onChange={(value) => setSelectedOptions(value)}
+      />
     </BrowserRouter>
   );
 }

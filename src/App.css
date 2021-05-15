@@ -90,4 +90,5 @@ video {
 * {
   font-family: Graphik !important;
   color: #323130;
+  box-sizing: border-box;
 }
